@@ -1,7 +1,7 @@
 # EcomLocalization-LLM
-## 基于LLM实现跨境电商的本土化
+# 基于LLM实现跨境电商的本土化
 
-# 使用前准备
+## 使用前准备
 1、需要先安装chrome浏览器以及chromedriver  
 
 2、下载DrissionPage包，  
