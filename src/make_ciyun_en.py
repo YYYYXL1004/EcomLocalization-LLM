@@ -41,13 +41,12 @@ def generate_wordcloud(file_path):
 
         # 生成词云
         wordcloud = WordCloud(width=800, height=400, background_color='white').generate(all_text)
-
+        wordcloud.to_file('../JD/data/ciyun/shopee_cheongsam.png')
         # 显示词云图
         plt.figure(figsize=(10, 5))
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.axis('off')
         plt.show()
-        plt.savefig('../JD/data/ciyun/shopee_cheongsam.png')
     except FileNotFoundError:
         print("未找到指定的文件，请检查文件路径。")
     except Exception as e:
