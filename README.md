@@ -18,9 +18,9 @@ EcomLocalization-LLM/
 │
 ├── 2_preprocessing/          # 数据预处理
 │   ├── data_process.py       # 数据清洗与格式化
-│   ├── 评论预处理.py           # 中文评论预处理（分词/去噪）
-│   ├── Delete_NotHotWorde.py # 删除非热门词
-│   ├── 评论标记合并.py          # 评论标签合并
+│   ├── comment_preprocess.py  # 中文评论预处理（分词/去噪）
+│   ├── Delete_NotHotWorde.py  # 删除非热门词
+│   ├── merge_comment_labels.py # 评论标签合并
 │   ├── Occur_Of_Words.py     # 词频统计
 │   ├── UpdateTxt.py          # 文本更新工具
 │   ├── NewExcel.py           # Excel 新建工具
@@ -38,8 +38,10 @@ EcomLocalization-LLM/
 │   │   ├── mainhanshu.py           # 主函数入口
 │   │   ├── util.py                 # 工具函数
 │   │   ├── word2vec_ex.py          # Word2Vec 扩展
-│   │   ├── 情感值计算.py             # 情感分析
-│   │   └── 特征负面评价改进.py       # 负面特征改进
+│   │   ├── sentiment_score.py       # 情感分析
+│   │   ├── feature_negative_improvement.py # 负面特征改进
+│   │   ├── run.py                   # 主运行入口
+│   │   └── test.py                  # 测试脚本
 │   └── notebooks/            # Jupyter 实验 Notebooks
 │       ├── tfidf_lda.ipynb         # TF-IDF + LDA
 │       ├── word2vec_lda.ipynb      # Word2Vec + LDA
@@ -50,12 +52,13 @@ EcomLocalization-LLM/
 │       └── DeepSeek_lda.ipynb      # DeepSeek 辅助 LDA
 │
 ├── 4_clustering/             # 聚类分析（Top2Vec + BERT K-Means）
-│   ├── 1.top2vec_clothes.py  # 服装品类 Top2Vec
-│   ├── 1.top2vec_fruit.py    # 水果品类 Top2Vec
-│   ├── 1.top2vec_phone.py    # 手机品类 Top2Vec
+│   ├── 1.top2vec_clothes.py      # 服装品类 Top2Vec
+│   ├── 1.top2vec_fruit.py        # 水果品类 Top2Vec
+│   ├── 1.top2vec_phone.py        # 手机品类 Top2Vec
 │   ├── 2.bert_kmeans_clothes.py  # 服装 BERT + K-Means
 │   ├── 2.bert_kmeans_fruit.py    # 水果 BERT + K-Means
-│   └── 2.bert_kmeans_phone.py    # 手机 BERT + K-Means
+│   ├── 2.bert_kmeans_phone.py    # 手机 BERT + K-Means
+│   └── task_notes.txt            # 任务说明
 │
 ├── 5_visualization/          # 可视化
 │   ├── make_ciyun.py         # 中文词云生成
@@ -94,7 +97,7 @@ python 1_data_collection/jd_packaged.py
 ### 3. 数据预处理
 
 ```bash
-python 2_preprocessing/评论预处理.py
+python 2_preprocessing/comment_preprocess.py
 ```
 
 ### 4. 主题建模
