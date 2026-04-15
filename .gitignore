@@ -1,0 +1,69 @@
+# ===== 虚拟环境 =====
+venv/
+.venv/
+env/
+**/venv/
+**/.venv/
+
+# ===== Python 缓存 =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# ===== 数据文件 =====
+data/
+**/data/
+*.csv
+*.xls
+*.xlsx
+*.json
+*.jsonl
+
+# ===== 语料库 / 索引 =====
+*.mm
+*.mm.index
+
+# ===== 结果与图片 =====
+result/
+**/result/
+pic/
+**/pic/
+excel/
+**/excel/
+csv/
+**/csv/
+
+# ===== 预训练模型与大文件 =====
+bert-base-chinese/
+bert_base_chinese/
+tencent-ailab-embedding-zh-d100-v0.2.0-s/
+model/
+variables/
+*.pb
+*.rar
+*.zip
+*.tar.gz
+*.h5
+*.pt
+*.bin
+*.safetensors
+
+# ===== 字体 =====
+*.ttf
+*.otf
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
